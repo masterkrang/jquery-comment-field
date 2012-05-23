@@ -33,7 +33,7 @@
 
 				//call submit on the parent form
 				//get form object
-				var form = this.parents("form:first");
+				var form = $(this).parents("form:first");
 				//this works too
 				//var form = $(this).closest('form');
 
@@ -42,10 +42,13 @@
 					//alert(x.message);
 					$(this).find("textarea").val("");
 				});
+				
+				// TODO add error
 
 
 				// TODO ajax submit this and have some logic for json dealing with the response to show the comment
 				form.submit();
+				
 			} else {
 				showTip();
 			}
@@ -62,6 +65,7 @@
 	
 	function showTip() {
 		//show tool tip about pressing enter to submit
+		console.log("show tip");
 	}
 	
 })( jQuery );
