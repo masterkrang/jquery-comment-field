@@ -20,8 +20,8 @@
 		
 		opts = $.extend(defaults, options);
 		
-		
 		this.keypress(function(e) {
+			
 			var code = event.keyCode || event.which;
 			if(code == 13) {
 
@@ -46,16 +46,23 @@
 
 				// TODO ajax submit this and have some logic for json dealing with the response to show the comment
 				form.submit();
+			} else {
+				showTip();
 			}
-
-
 
 			//not sure if return false is needed, the idea is to stop a regular enter press from registering
 			//return false;
 		});
 		
 		
+		
+		
 	};
+	
+	
+	function showTip() {
+		//show tool tip about pressing enter to submit
+	}
 	
 })( jQuery );
 
